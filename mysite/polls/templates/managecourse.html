@@ -1,0 +1,101 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>课程管理</title>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+
+{% load bootstrap3 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+<body>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/polls/index">首页</a>
+            </div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<!-- <li><a href="#">学生</a></li> -->
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">学生 <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="/polls/signup">选课</a></li>
+							<li><a href="/polls/lookup">状态</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">教师 <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="/polls/addcourse">添加课程</a></li>
+							<li><a href="/polls/getcourses">查看课程</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">教务 <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+                            <li><a href="/polls/addprocess">添加流程</a></li>
+							<li><a href="/polls/processmanage">管理流程</a></li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#">{{ user }}</a></li>
+					<li><a href="/polls/logout">登出</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	
+	<div class="container">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-info">
+                <div class="panel-heading">课程管理</div>
+                <div class="panel-body">
+
+                    {% bootstrap_messages %}
+                    <h1>{{course.id}}: {{course.name}} <small>[开课人:{{course.teacher.name}}] </small></h1>
+                    <br> 
+                    <p class="lead">选课人数：{{course.current}} / {{course.limit}}</p>
+                    <p class="lead">学分：{{course.credit}}</p>
+                    <p class="lead">时间：{{course.time}}</p>
+                    <p class="lead">地点：{{course.place}}</p>
+                    <p class="lead">描述：{{course.description}}</p>
+                    <hr>
+                    <h3>选课学生：</h3>
+                    <table class="table">
+                        <tr>
+                            <th>ID</th>
+                            <th>姓名</th>
+                            <th>操作</th>
+                        </tr>   
+                         {% for s in sinfo %}
+                         <tr>
+                            <td>{{s.student.id}}</td>
+                            <td>{{s.student.name}}</td>
+                            <td>
+                                <a class="btn btn-warning btn-xs" href="/polls/{{s.course.id}}/delete/{{s.student.id}}" role="button">{% bootstrap_icon "minus" %} 删除</a>
+                            </td>
+                         </tr>
+                         {% endfor %}
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

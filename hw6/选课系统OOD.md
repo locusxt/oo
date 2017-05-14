@@ -54,6 +54,7 @@
 | ----------- | ------ | ------- |
 | courseID    | String | 课程的唯一标识 |
 | teacherID   | String | 开课老师的ID |
+| courseName  | String | 课程名称    |
 | limit       | Int    | 选课人数上限  |
 | time        | String | 上课时间    |
 | place       | String | 上课地点    |
