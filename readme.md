@@ -8,6 +8,6 @@
 4. [作业4: 需求分析](https://github.com/locusxt/oo/blob/master/hw4/%E9%80%89%E8%AF%BE%E7%B3%BB%E7%BB%9F%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E6%8A%A5%E5%91%8A.md)
 5. [作业5: 系统分析](https://github.com/locusxt/oo/blob/master/hw5/%E9%80%89%E8%AF%BE%E7%B3%BB%E7%BB%9FOOA.md)
 6. [作业6: 系统设计](https://github.com/locusxt/oo/blob/master/hw6/%E9%80%89%E8%AF%BE%E7%B3%BB%E7%BB%9FOOD.md)
-7. [作业7: 第一次系统总结与验收]()
+7. [作业7: 第一次系统总结与验收](https://github.com/locusxt/oo/blob/master/hw7/%E7%B3%BB%E7%BB%9F%E6%80%BB%E7%BB%93%E6%8A%A5%E5%91%8A.md)
 
 
