@@ -6,6 +6,8 @@
 
 [选课系统需求分析报告](https://github.com/locusxt/oo/blob/master/hw4/%E9%80%89%E8%AF%BE%E7%B3%BB%E7%BB%9F%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E6%8A%A5%E5%91%8A.md)
 
+[选课系统OOA](https://github.com/locusxt/oo/blob/master/hw5/%E9%80%89%E8%AF%BE%E7%B3%BB%E7%BB%9FOOA.md)
+
 ## 1. 系统概述
 
 本系统的设计目标是协助学生提高选课效率以及准确率，以网页方式呈现学生选课系统，提供学生选课在线数字平台。
@@ -14,11 +16,11 @@
 
 ## 2. 系统环境
 
-| 框架    | nodejs            |
+| 框架    | django            |
 | ----- | ----------------- |
-| 数据库   | mysql             |
+| 数据库   | sqlite            |
 | 服务器环境 | osx               |
-| 开发语言  | javascript        |
+| 开发语言  | python+javascript |
 | 客户端   | chrome/firefox/IE |
 
 ## 3. 系统设计
