@@ -47,6 +47,7 @@
 						<ul class="dropdown-menu">
 							<li><a href="/polls/addprocess">添加流程</a></li>
 							<li><a href="/polls/processmanage">管理流程</a></li>
+							<li><a href="/polls/draw">开始抽签</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -64,11 +65,13 @@
                 <div class="panel-heading">已选课程</div>
                 <div class="panel-body">
                     {% bootstrap_messages %}
+					<p class="lead">必修{{must}} + 选修{{select}} = {{u.credit_current}} / {{u.credit_limit}}</p>
                     <table class="table">
                     	<tr>
                     		<th>ID</th>
                     		<th>名称</th>
                     		<th>学分</th>
+                    		<th>类型</th>
                     		<th>人数</th>
                     		<th>操作</th>
                     	</tr>	
@@ -77,6 +80,7 @@
                     	 	<td>{{s.course.id}}</td>
                     	 	<td>{{s.course.name}}</td>
                     	 	<td>{{s.course.credit}}</td>
+                    	 	<td>{{s.course.mytype}}</td>
                     	 	<td>{{s.course.current}} / {{s.course.limit}}</td>
                     	 	<td>
                     	 		<a class="btn btn-warning btn-xs" href="/polls/{{s.course.id}}/cancel" role="button">{% bootstrap_icon "minus" %} 退选</a>

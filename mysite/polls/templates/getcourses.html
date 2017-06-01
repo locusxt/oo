@@ -47,6 +47,7 @@
 						<ul class="dropdown-menu">
 							<li><a href="/polls/addprocess">添加流程</a></li>
 							<li><a href="processmanage">管理流程</a></li>
+							<li><a href="/polls/draw">开始抽签</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -69,6 +70,7 @@
                     		<th>ID</th>
                     		<th>名称</th>
                     		<th>学分</th>
+                    		<th>类型</th>
                     		<th>人数</th>
                     		<th>描述</th>
                     		<th></th>
@@ -78,6 +80,7 @@
                     	 	<td>{{c.id}}</td>
                     	 	<td>{{c.name}}</td>
                     	 	<td>{{c.credit}}</td>
+                    	 	<td>{{c.mytype}}</td>
                     	 	<td>{{c.current}} / {{c.limit}}</td>
                     	 	<td>{{c.description}}</td>
                     	 	<td>

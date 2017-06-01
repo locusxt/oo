@@ -26,6 +26,9 @@ class Course(models.Model):
 	time = models.CharField(max_length=17)
 	place = models.CharField(max_length=17)
 	description = models.CharField(max_length=17)
+	syllabus = models.CharField(max_length=77, default='')
+	standard = models.CharField(max_length=77, default='')
+	mytype = models.CharField(max_length=7, default='必修')
 	def isFull(self):
 		return self.current >= self.limit
 	def addCurrent(self, num=1):
@@ -45,6 +48,5 @@ class Process(models.Model):
 	endTime = models.DateTimeField('end')
 	mytype = models.CharField(max_length=17)
 	state = models.CharField(max_length=17)
-
 
 

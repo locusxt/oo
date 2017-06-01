@@ -47,6 +47,7 @@
 						<ul class="dropdown-menu">
                             <li><a href="/polls/addprocess">添加流程</a></li>
 							<li><a href="/polls/processmanage">管理流程</a></li>
+							<li><a href="/polls/draw">开始抽签</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -69,9 +70,12 @@
                     <br> 
                     <p class="lead">选课人数：{{course.current}} / {{course.limit}}</p>
                     <p class="lead">学分：{{course.credit}}</p>
+                    <p class="lead">类型：{{course.mytype}}</p>
                     <p class="lead">时间：{{course.time}}</p>
                     <p class="lead">地点：{{course.place}}</p>
                     <p class="lead">描述：{{course.description}}</p>
+                    <p class="lead">大纲：{{course.syllabus}}</p>
+                    <p class="lead">评分：{{course.standard}}</p>
                     <hr>
                     <h3>选课学生：</h3>
                     <table class="table">

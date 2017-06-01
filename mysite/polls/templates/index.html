@@ -47,6 +47,7 @@
 						<ul class="dropdown-menu">
 							<li><a href="/polls/addprocess">添加流程</a></li>
 							<li><a href="processmanage">管理流程</a></li>
+							<li><a href="/polls/draw">开始抽签</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -60,6 +61,7 @@
 	
 	<div class="jumbotron">
 		<div class="container">
+			{% bootstrap_messages %}
 			<div class="col-md-6 col-md-offset-3">
 				<h1>欢迎，{{user}}</h1>
 				<p>访问时间: {{time}}</p>

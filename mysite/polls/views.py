@@ -8,6 +8,7 @@ from django.template import RequestContext
 from django.contrib import messages  
 import time
 import datetime
+import random
 
 from django import forms
 from models import MyUser, Course, SignupInfo, Process
@@ -24,7 +25,10 @@ class Teacher:
             time = info['time'],
             place = info['place'],
             description = info['desc'],
-            credit = info['credit']
+            credit = info['credit'],
+            syllabus = info['syllabus'],
+            standard = info['standard'],
+            mytype = info['mytype']
             )
     def getCourses(self):
         courses = Course.objects.filter(teacher=self.teacher)
@@ -97,6 +101,20 @@ class MyAdmin:
         return processes
     def deleteProcess(self, processid):
         Process.objects.filter(id = processid).delete()
+    def draw(self):
+        courses = Course.objects.all()
+        for c in courses:
+            current = c.current
+            limit = c.limit
+            infos = SignupInfo.objects.filter(course = c)
+            if current > limit:
+                rm_num = current - limit
+                rm_list = random.sample(infos, rm_num)
+                c.subCurrent(rm_num)
+                for r in rm_list:
+                    r.student.subCurrent(r.course.credit)
+                    SignupInfo.objects.filter(id = r.id).delete()
+
 
 class ProcessState:
     def __init__(self):
@@ -130,6 +148,9 @@ class ProcessState:
 ##basic login logout view
 def index(req):
     username = req.COOKIES.get('username','')
+    user = get_object_or_404(MyUser, name = username)
+    # myadmin = MyAdmin(user)
+    # myadmin.draw()
     now = time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time()))  
     ip= ""
     if req.META.has_key('HTTP_X_FORWARDED_FOR'):  
@@ -174,13 +195,21 @@ def logout(req):
 
 
 ##Teacher view
+COURSE_CHOICES = (
+    ('必修', '必修'),
+    ('选修', '选修'),
+    )
+
 class NewCourseForm(forms.Form):
     coursename = forms.CharField(label='课程名', max_length=17)
     limit = forms.IntegerField(label='人数上限')
     credit = forms.IntegerField(label='学分')
+    mytype = forms.ChoiceField(choices=COURSE_CHOICES,label='类型')
     time = forms.CharField(label='上课时间', max_length=17)
     place = forms.CharField(label='上课地点', max_length=17)
     desc = forms.CharField(label='课程描述', max_length=17)
+    syllabus = forms.CharField(label='教学大纲', max_length=77)
+    standard = forms.CharField(label='评分标准', max_length=77)
 
 def addNewCourse(req):
     uname = req.COOKIES.get('username','')
@@ -197,6 +226,9 @@ def addNewCourse(req):
             res['place'] = ncf.cleaned_data['place']
             res['desc'] = ncf.cleaned_data['desc']
             res['credit'] = ncf.cleaned_data['credit']
+            res['syllabus'] = ncf.cleaned_data['syllabus']
+            res['standard'] = ncf.cleaned_data['standard']
+            res['mytype'] = ncf.cleaned_data['mytype']
             teacher.addCourse(res)
             response = HttpResponseRedirect('/polls/addcourse')
             messages.add_message(req, messages.INFO, res['coursename'] + '添加成功') 
@@ -237,7 +269,14 @@ def getAllCourses(req):
     courses = student.getAllCourses()
     ps = ProcessState()
     messages.add_message(req, messages.INFO, ps.getMsg())
-    return render(req, 'getallcourses.html', {'user':uname, 'courses':courses, 'u':user})
+    select_credit = 0
+    must_credit = 0
+    for s in courses:
+        if s.mytype == "必修":
+            must_credit += s.credit
+        else:
+            select_credit += s.credit
+    return render(req, 'getallcourses.html', {'user':uname, 'courses':courses, 'u':user, 'must':must_credit, 'select':select_credit})
 
 def signup(req, courseid):
     uname = req.COOKIES.get('username','')
@@ -257,7 +296,14 @@ def getSignupInfo(req):
     user = get_object_or_404(MyUser, name = uname)
     student = Student(user)
     res = student.getSignupInfo()
-    return render(req, 'getsignupinfo.html', {'user':uname, 'sinfo':res})
+    select_credit = 0
+    must_credit = 0
+    for s in res:
+        if s.course.mytype == "必修":
+            must_credit += s.course.credit
+        else:
+            select_credit += s.course.credit
+    return render(req, 'getsignupinfo.html', {'user':uname,'u':user, 'sinfo':res, 'must':must_credit, 'select':select_credit})
 
 def cancelSignup(req, courseid):
     uname = req.COOKIES.get('username','')
@@ -310,3 +356,10 @@ def deleteProcess(req, processid):
     myadmin.deleteProcess(processid)
     return getAllProcesses(req)
 
+def draw(req):
+    uname = req.COOKIES.get('username','')
+    user = get_object_or_404(MyUser, name = uname)
+    myadmin = MyAdmin(user)
+    myadmin.draw()
+    messages.add_message(req, messages.INFO, '抽签已经完成') 
+    return index(req)

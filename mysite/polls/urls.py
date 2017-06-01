@@ -17,6 +17,7 @@ urlpatterns = [
     url(r'^addprocess$', views.addProcess, name='add process'),
     url(r'^processmanage$', views.getAllProcesses, name='get all processes'),
     url(r'^deleteprocess/(?P<processid>[0-9]+)$', views.deleteProcess, name='delete process'),
+    url(r'^draw$', views.draw, name='draw'),
 ]
 
 

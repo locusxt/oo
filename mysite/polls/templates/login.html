@@ -15,20 +15,25 @@
 
 <div class="jumbotron">
     <div class="container">
-        <div class="col-md-4 col-md-offset-4">
-            <div class="panel panel-default">
-                <div class="panel-heading">登录</div>
-                <div class="panel-body">
-                    {% bootstrap_messages %}
-                    <form action="login" method="post" class="form">
-                    {% csrf_token %}
-                    {% bootstrap_form uf %}
-                    {% buttons %}
-                        <button type="submit" class="btn btn-primary">
-                            {% bootstrap_icon "ok" %} 登录
-                        </button>
-                    {% endbuttons %}
-                    </form>
+        <div class="col-md-10 col-md-offset-1">
+            <div class="col-md-6">
+            <img src="https://iaaa.pku.edu.cn/iaaa/resources/images/pku_view_5.jpg" alt="logo" />
+            </div>
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">登录</div>
+                    <div class="panel-body">
+                        {% bootstrap_messages %}
+                        <form action="login" method="post" class="form">
+                        {% csrf_token %}
+                        {% bootstrap_form uf %}
+                        {% buttons %}
+                            <button type="submit" class="btn btn-primary">
+                                {% bootstrap_icon "ok" %} 登录
+                            </button>
+                        {% endbuttons %}
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
