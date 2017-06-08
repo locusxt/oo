@@ -10,13 +10,16 @@
 0004_course_credit.py	polls/migrations/0004_course_credit.py	1;"	kind:file	line:1
 0005_auto_20170514_1030.py	polls/migrations/0005_auto_20170514_1030.py	1;"	kind:file	line:1
 0006_auto_20170514_1444.py	polls/migrations/0006_auto_20170514_1444.py	1;"	kind:file	line:1
+0007_auto_20170531_1130.py	polls/migrations/0007_auto_20170531_1130.py	1;"	kind:file	line:1
+0008_course_mytype.py	polls/migrations/0008_course_mytype.py	1;"	kind:file	line:1
 ALLOWED_HOSTS	mysite/settings.py	/^ALLOWED_HOSTS = []$/;"	kind:variable	line:28
 AUTH_PASSWORD_VALIDATORS	mysite/settings.py	/^AUTH_PASSWORD_VALIDATORS = [$/;"	kind:variable	line:89
 AppConfig	polls/apps.py	/^from django.apps import AppConfig$/;"	kind:namespace	line:4
 BASE_DIR	mysite/settings.py	/^BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))$/;"	kind:variable	line:16
+COURSE_CHOICES	polls/views.py	/^COURSE_CHOICES = ($/;"	kind:variable	line:198
 Course	polls/admin.py	/^from .models import MyUser, Course, SignupInfo, Process$/;"	kind:namespace	line:7
 Course	polls/models.py	/^class Course(models.Model):$/;"	kind:class	line:20
-Course	polls/views.py	/^from models import MyUser, Course, SignupInfo, Process$/;"	kind:namespace	line:13
+Course	polls/views.py	/^from models import MyUser, Course, SignupInfo, Process$/;"	kind:namespace	line:14
 DATABASES	mysite/settings.py	/^DATABASES = {$/;"	kind:variable	line:78
 DEBUG	mysite/settings.py	/^DEBUG = True$/;"	kind:variable	line:26
 HttpResponse	polls/views.py	/^from django.http import HttpResponse, HttpResponseRedirect$/;"	kind:namespace	line:6
@@ -30,69 +33,71 @@ Migration	polls/migrations/0003_course_current.py	/^class Migration(migrations.M
 Migration	polls/migrations/0004_course_credit.py	/^class Migration(migrations.Migration):$/;"	kind:class	line:8
 Migration	polls/migrations/0005_auto_20170514_1030.py	/^class Migration(migrations.Migration):$/;"	kind:class	line:8
 Migration	polls/migrations/0006_auto_20170514_1444.py	/^class Migration(migrations.Migration):$/;"	kind:class	line:8
-MyAdmin	polls/views.py	/^class MyAdmin:$/;"	kind:class	line:90
+Migration	polls/migrations/0007_auto_20170531_1130.py	/^class Migration(migrations.Migration):$/;"	kind:class	line:8
+Migration	polls/migrations/0008_course_mytype.py	/^class Migration(migrations.Migration):$/;"	kind:class	line:8
+MyAdmin	polls/views.py	/^class MyAdmin:$/;"	kind:class	line:94
 MyUser	polls/admin.py	/^from .models import MyUser, Course, SignupInfo, Process$/;"	kind:namespace	line:7
 MyUser	polls/models.py	/^class MyUser(models.Model):$/;"	kind:class	line:7
-MyUser	polls/views.py	/^from models import MyUser, Course, SignupInfo, Process$/;"	kind:namespace	line:13
-NewCourseForm	polls/views.py	/^class NewCourseForm(forms.Form):$/;"	kind:class	line:177
-NewProcessForm	polls/views.py	/^class NewProcessForm(forms.Form):$/;"	kind:class	line:277
-PROCESS_CHOICES	polls/views.py	/^PROCESS_CHOICES = ($/;"	kind:variable	line:271
+MyUser	polls/views.py	/^from models import MyUser, Course, SignupInfo, Process$/;"	kind:namespace	line:14
+NewCourseForm	polls/views.py	/^class NewCourseForm(forms.Form):$/;"	kind:class	line:203
+NewProcessForm	polls/views.py	/^class NewProcessForm(forms.Form):$/;"	kind:class	line:323
+PROCESS_CHOICES	polls/views.py	/^PROCESS_CHOICES = ($/;"	kind:variable	line:317
 PollsConfig	polls/apps.py	/^class PollsConfig(AppConfig):$/;"	kind:class	line:7
 Process	polls/admin.py	/^from .models import MyUser, Course, SignupInfo, Process$/;"	kind:namespace	line:7
-Process	polls/models.py	/^class Process(models.Model):$/;"	kind:class	line:43
-Process	polls/views.py	/^from models import MyUser, Course, SignupInfo, Process$/;"	kind:namespace	line:13
-ProcessState	polls/views.py	/^class ProcessState:$/;"	kind:class	line:101
+Process	polls/models.py	/^class Process(models.Model):$/;"	kind:class	line:46
+Process	polls/views.py	/^from models import MyUser, Course, SignupInfo, Process$/;"	kind:namespace	line:14
+ProcessState	polls/views.py	/^class ProcessState:$/;"	kind:class	line:119
 ROOT_URLCONF	mysite/settings.py	/^ROOT_URLCONF = 'mysite.urls'$/;"	kind:variable	line:54
 RequestContext	polls/views.py	/^from django.template import RequestContext$/;"	kind:namespace	line:7
 SECRET_KEY	mysite/settings.py	/^SECRET_KEY = 'ni3#&a8-#i#nnaq+n!4*$mub5ci!6h4d9n92ve3=pcr@2uuf6f'$/;"	kind:variable	line:23
 STATIC_URL	mysite/settings.py	/^STATIC_URL = '\/static\/'$/;"	kind:variable	line:123
-SelectDateWidget	polls/views.py	/^from django.forms.extras.widgets import SelectDateWidget$/;"	kind:namespace	line:15
+SelectDateWidget	polls/views.py	/^from django.forms.extras.widgets import SelectDateWidget$/;"	kind:namespace	line:16
 SignupInfo	polls/admin.py	/^from .models import MyUser, Course, SignupInfo, Process$/;"	kind:namespace	line:7
-SignupInfo	polls/models.py	/^class SignupInfo(models.Model):$/;"	kind:class	line:38
-SignupInfo	polls/views.py	/^from models import MyUser, Course, SignupInfo, Process$/;"	kind:namespace	line:13
-Student	polls/views.py	/^class Student:$/;"	kind:class	line:44
+SignupInfo	polls/models.py	/^class SignupInfo(models.Model):$/;"	kind:class	line:41
+SignupInfo	polls/views.py	/^from models import MyUser, Course, SignupInfo, Process$/;"	kind:namespace	line:14
+Student	polls/views.py	/^class Student:$/;"	kind:class	line:48
 TEMPLATES	mysite/settings.py	/^TEMPLATES = [$/;"	kind:variable	line:56
 TIME_ZONE	mysite/settings.py	/^TIME_ZONE = 'Asia\/Shanghai'$/;"	kind:variable	line:110
-Teacher	polls/views.py	/^class Teacher:$/;"	kind:class	line:17
+Teacher	polls/views.py	/^class Teacher:$/;"	kind:class	line:18
 TestCase	polls/tests.py	/^from django.test import TestCase$/;"	kind:namespace	line:4
 USE_I18N	mysite/settings.py	/^USE_I18N = True$/;"	kind:variable	line:113
 USE_L10N	mysite/settings.py	/^USE_L10N = True$/;"	kind:variable	line:115
 USE_TZ	mysite/settings.py	/^USE_TZ = True$/;"	kind:variable	line:117
-UserForm	polls/views.py	/^class UserForm(forms.Form):$/;"	kind:class	line:145
+UserForm	polls/views.py	/^class UserForm(forms.Form):$/;"	kind:class	line:166
 WSGI_APPLICATION	mysite/settings.py	/^WSGI_APPLICATION = 'mysite.wsgi.application'$/;"	kind:variable	line:72
-__init__	polls/views.py	/^    def __init__(self):$/;"	kind:member	line:102
-__init__	polls/views.py	/^    def __init__(self, user):$/;"	kind:member	line:18
-__init__	polls/views.py	/^    def __init__(self, user):$/;"	kind:member	line:45
-__init__	polls/views.py	/^    def __init__(self, user):$/;"	kind:member	line:91
+__init__	polls/views.py	/^    def __init__(self):$/;"	kind:member	line:120
+__init__	polls/views.py	/^    def __init__(self, user):$/;"	kind:member	line:19
+__init__	polls/views.py	/^    def __init__(self, user):$/;"	kind:member	line:49
+__init__	polls/views.py	/^    def __init__(self, user):$/;"	kind:member	line:95
 __init__.py	mysite/__init__.py	1;"	kind:file	line:1
 __init__.py	polls/__init__.py	1;"	kind:file	line:1
 __init__.py	polls/migrations/__init__.py	1;"	kind:file	line:1
-addCourse	polls/views.py	/^    def addCourse(self, info):$/;"	kind:member	line:20
+addCourse	polls/views.py	/^    def addCourse(self, info):$/;"	kind:member	line:21
 addCurrent	polls/models.py	/^	def addCurrent(self, num=1):$/;"	kind:member	line:13
-addCurrent	polls/models.py	/^	def addCurrent(self, num=1):$/;"	kind:member	line:31
-addNewCourse	polls/views.py	/^def addNewCourse(req):$/;"	kind:function	line:185
-addProcess	polls/views.py	/^    def addProcess(self, info):$/;"	kind:member	line:93
-addProcess	polls/views.py	/^def addProcess(req):$/;"	kind:function	line:282
+addCurrent	polls/models.py	/^	def addCurrent(self, num=1):$/;"	kind:member	line:34
+addNewCourse	polls/views.py	/^def addNewCourse(req):$/;"	kind:function	line:214
+addProcess	polls/views.py	/^    def addProcess(self, info):$/;"	kind:member	line:97
+addProcess	polls/views.py	/^def addProcess(req):$/;"	kind:function	line:328
 admin	mysite/urls.py	/^from django.contrib import admin$/;"	kind:namespace	line:17
 admin	polls/admin.py	/^from django.contrib import admin$/;"	kind:namespace	line:4
 admin.py	polls/admin.py	1;"	kind:file	line:1
 application	mysite/wsgi.py	/^application = get_wsgi_application()$/;"	kind:variable	line:16
 apps.py	polls/apps.py	1;"	kind:file	line:1
-cancelSignup	polls/views.py	/^    def cancelSignup(self, courseid):$/;"	kind:member	line:79
-cancelSignup	polls/views.py	/^def cancelSignup(req, courseid):$/;"	kind:function	line:262
-course	polls/models.py	/^	course = models.ForeignKey(Course)$/;"	kind:variable	line:40
-coursename	polls/views.py	/^    coursename = forms.CharField(label='课程名', max_length=17)$/;"	kind:variable	line:178
+cancelSignup	polls/views.py	/^    def cancelSignup(self, courseid):$/;"	kind:member	line:83
+cancelSignup	polls/views.py	/^def cancelSignup(req, courseid):$/;"	kind:function	line:308
+course	polls/models.py	/^	course = models.ForeignKey(Course)$/;"	kind:variable	line:43
+coursename	polls/views.py	/^    coursename = forms.CharField(label='课程名', max_length=17)$/;"	kind:variable	line:204
 credit	polls/models.py	/^	credit = models.IntegerField(default=2)$/;"	kind:variable	line:25
-credit	polls/views.py	/^    credit = forms.IntegerField(label='学分')$/;"	kind:variable	line:180
+credit	polls/views.py	/^    credit = forms.IntegerField(label='学分')$/;"	kind:variable	line:206
 credit_current	polls/models.py	/^	credit_current = models.IntegerField(default=0)$/;"	kind:variable	line:11
 credit_limit	polls/models.py	/^	credit_limit = models.IntegerField(default=0)$/;"	kind:variable	line:12
 current	polls/models.py	/^	current = models.IntegerField(default=0)$/;"	kind:variable	line:23
 datetime	polls/views.py	/^import datetime$/;"	kind:namespace	line:10
 db	polls/migrations/0001_initial.py	/^import django.db.models.deletion$/;"	kind:namespace	line:6
-delStudent	polls/views.py	/^    def delStudent(self, courseid, studentid):$/;"	kind:member	line:36
-delStudent	polls/views.py	/^def delStudent(req, courseid, studentid):$/;"	kind:function	line:222
-deleteProcess	polls/views.py	/^    def deleteProcess(self, processid):$/;"	kind:member	line:98
-deleteProcess	polls/views.py	/^def deleteProcess(req, processid):$/;"	kind:function	line:306
+delStudent	polls/views.py	/^    def delStudent(self, courseid, studentid):$/;"	kind:member	line:40
+delStudent	polls/views.py	/^def delStudent(req, courseid, studentid):$/;"	kind:function	line:254
+deleteProcess	polls/views.py	/^    def deleteProcess(self, processid):$/;"	kind:member	line:102
+deleteProcess	polls/views.py	/^def deleteProcess(req, processid):$/;"	kind:function	line:352
 deletion	polls/migrations/0001_initial.py	/^import django.db.models.deletion$/;"	kind:namespace	line:6
 dependencies	polls/migrations/0001_initial.py	/^    dependencies = [$/;"	kind:variable	line:13
 dependencies	polls/migrations/0002_course_name.py	/^    dependencies = [$/;"	kind:variable	line:11
@@ -100,13 +105,17 @@ dependencies	polls/migrations/0003_course_current.py	/^    dependencies = [$/;"	
 dependencies	polls/migrations/0004_course_credit.py	/^    dependencies = [$/;"	kind:variable	line:10
 dependencies	polls/migrations/0005_auto_20170514_1030.py	/^    dependencies = [$/;"	kind:variable	line:10
 dependencies	polls/migrations/0006_auto_20170514_1444.py	/^    dependencies = [$/;"	kind:variable	line:10
-desc	polls/views.py	/^    desc = forms.CharField(label='课程描述', max_length=17)$/;"	kind:variable	line:183
+dependencies	polls/migrations/0007_auto_20170531_1130.py	/^    dependencies = [$/;"	kind:variable	line:10
+dependencies	polls/migrations/0008_course_mytype.py	/^    dependencies = [$/;"	kind:variable	line:10
+desc	polls/views.py	/^    desc = forms.CharField(label='课程描述', max_length=17)$/;"	kind:variable	line:210
 description	polls/models.py	/^	description = models.CharField(max_length=17)$/;"	kind:variable	line:28
 django	manage.py	/^            import django$/;"	kind:namespace	line:14
 django	polls/migrations/0001_initial.py	/^import django.db.models.deletion$/;"	kind:namespace	line:6
 django	polls/migrations/0002_course_name.py	/^import django.utils.timezone$/;"	kind:namespace	line:6
-endTime	polls/models.py	/^	endTime = models.DateTimeField('end')$/;"	kind:variable	line:45
-endTime	polls/views.py	/^    endTime = forms.DateTimeField(widget=SelectDateWidget(), label = '结束时间')$/;"	kind:variable	line:279
+draw	polls/views.py	/^    def draw(self):$/;"	kind:member	line:104
+draw	polls/views.py	/^def draw(req):$/;"	kind:function	line:359
+endTime	polls/models.py	/^	endTime = models.DateTimeField('end')$/;"	kind:variable	line:48
+endTime	polls/views.py	/^    endTime = forms.DateTimeField(widget=SelectDateWidget(), label = '结束时间')$/;"	kind:variable	line:325
 execute_from_command_line	manage.py	/^        from django.core.management import execute_from_command_line$/;"	kind:namespace	line:8
 field	polls/migrations/0001_initial.py	/^            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='polls.MyUser'),$/;"	kind:variable	line:58
 field	polls/migrations/0002_course_name.py	/^            field=models.CharField(default=django.utils.timezone.now, max_length=17),$/;"	kind:variable	line:19
@@ -114,35 +123,38 @@ field	polls/migrations/0003_course_current.py	/^            field=models.Integer
 field	polls/migrations/0004_course_credit.py	/^            field=models.IntegerField(default=2),$/;"	kind:variable	line:18
 field	polls/migrations/0005_auto_20170514_1030.py	/^            field=models.IntegerField(default=0),$/;"	kind:variable	line:18
 field	polls/migrations/0005_auto_20170514_1030.py	/^            field=models.IntegerField(default=0),$/;"	kind:variable	line:23
+field	polls/migrations/0007_auto_20170531_1130.py	/^            field=models.CharField(default='', max_length=77),$/;"	kind:variable	line:18
+field	polls/migrations/0007_auto_20170531_1130.py	/^            field=models.CharField(default='', max_length=77),$/;"	kind:variable	line:23
+field	polls/migrations/0008_course_mytype.py	/^            field=models.CharField(default='\\u5fc5\\u4fee', max_length=7),$/;"	kind:variable	line:18
 fields	polls/migrations/0001_initial.py	/^            fields=[$/;"	kind:variable	line:19
 fields	polls/migrations/0001_initial.py	/^            fields=[$/;"	kind:variable	line:29
 fields	polls/migrations/0001_initial.py	/^            fields=[$/;"	kind:variable	line:38
 fields	polls/migrations/0001_initial.py	/^            fields=[$/;"	kind:variable	line:48
-forms	polls/views.py	/^from django import forms$/;"	kind:namespace	line:12
-getAllCourses	polls/views.py	/^    def getAllCourses(self):$/;"	kind:member	line:68
-getAllCourses	polls/views.py	/^def getAllCourses(req):$/;"	kind:function	line:233
-getAllProcesses	polls/views.py	/^    def getAllProcesses(self):$/;"	kind:member	line:95
-getAllProcesses	polls/views.py	/^def getAllProcesses(req):$/;"	kind:function	line:299
-getCourseInfo	polls/views.py	/^    def getCourseInfo(self, courseid):#have not tested$/;"	kind:member	line:32
-getCourses	polls/views.py	/^    def getCourses(self):$/;"	kind:member	line:29
-getCourses	polls/views.py	/^def getCourses(req):$/;"	kind:function	line:208
-getMsg	polls/views.py	/^    def getMsg(self):$/;"	kind:member	line:110
-getSignupInfo	polls/views.py	/^    def getSignupInfo(self):$/;"	kind:member	line:76
-getSignupInfo	polls/views.py	/^def getSignupInfo(req):$/;"	kind:function	line:255
-getStateList	polls/views.py	/^    def getStateList(self):$/;"	kind:member	line:104
+forms	polls/views.py	/^from django import forms$/;"	kind:namespace	line:13
+getAllCourses	polls/views.py	/^    def getAllCourses(self):$/;"	kind:member	line:72
+getAllCourses	polls/views.py	/^def getAllCourses(req):$/;"	kind:function	line:265
+getAllProcesses	polls/views.py	/^    def getAllProcesses(self):$/;"	kind:member	line:99
+getAllProcesses	polls/views.py	/^def getAllProcesses(req):$/;"	kind:function	line:345
+getCourseInfo	polls/views.py	/^    def getCourseInfo(self, courseid):#have not tested$/;"	kind:member	line:36
+getCourses	polls/views.py	/^    def getCourses(self):$/;"	kind:member	line:33
+getCourses	polls/views.py	/^def getCourses(req):$/;"	kind:function	line:240
+getMsg	polls/views.py	/^    def getMsg(self):$/;"	kind:member	line:128
+getSignupInfo	polls/views.py	/^    def getSignupInfo(self):$/;"	kind:member	line:80
+getSignupInfo	polls/views.py	/^def getSignupInfo(req):$/;"	kind:function	line:294
+getStateList	polls/views.py	/^    def getStateList(self):$/;"	kind:member	line:122
 get_object_or_404	polls/views.py	/^from django.shortcuts import render, render_to_response, get_object_or_404 $/;"	kind:namespace	line:5
 get_wsgi_application	mysite/wsgi.py	/^from django.core.wsgi import get_wsgi_application$/;"	kind:namespace	line:12
-getinfo	polls/views.py	/^    def getinfo(self):$/;"	kind:member	line:116
+getinfo	polls/views.py	/^    def getinfo(self):$/;"	kind:member	line:134
 include	mysite/urls.py	/^from django.conf.urls import include,  url$/;"	kind:namespace	line:16
-index	polls/views.py	/^def index(req):$/;"	kind:function	line:131
+index	polls/views.py	/^def index(req):$/;"	kind:function	line:149
 initial	polls/migrations/0001_initial.py	/^    initial = True$/;"	kind:variable	line:11
-isFull	polls/models.py	/^	def isFull(self):$/;"	kind:member	line:29
+isFull	polls/models.py	/^	def isFull(self):$/;"	kind:member	line:32
 limit	polls/models.py	/^	limit = models.IntegerField(default=70)$/;"	kind:variable	line:24
-limit	polls/views.py	/^    limit = forms.IntegerField(label='人数上限')$/;"	kind:variable	line:179
-login	polls/views.py	/^def login(req):$/;"	kind:function	line:149
-logout	polls/views.py	/^def logout(req):$/;"	kind:function	line:167
+limit	polls/views.py	/^    limit = forms.IntegerField(label='人数上限')$/;"	kind:variable	line:205
+login	polls/views.py	/^def login(req):$/;"	kind:function	line:170
+logout	polls/views.py	/^def logout(req):$/;"	kind:function	line:188
 manage.py	manage.py	1;"	kind:file	line:1
-manageCourse	polls/views.py	/^def manageCourse(req, courseid):$/;"	kind:function	line:215
+manageCourse	polls/views.py	/^def manageCourse(req, courseid):$/;"	kind:function	line:247
 messages	polls/views.py	/^from django.contrib import messages  $/;"	kind:namespace	line:8
 migrations	polls/migrations/0001_initial.py	/^from django.db import migrations, models$/;"	kind:namespace	line:5
 migrations	polls/migrations/0002_course_name.py	/^from django.db import migrations, models$/;"	kind:namespace	line:5
@@ -150,6 +162,8 @@ migrations	polls/migrations/0003_course_current.py	/^from django.db import migra
 migrations	polls/migrations/0004_course_credit.py	/^from django.db import migrations, models$/;"	kind:namespace	line:5
 migrations	polls/migrations/0005_auto_20170514_1030.py	/^from django.db import migrations, models$/;"	kind:namespace	line:5
 migrations	polls/migrations/0006_auto_20170514_1444.py	/^from django.db import migrations$/;"	kind:namespace	line:5
+migrations	polls/migrations/0007_auto_20170531_1130.py	/^from django.db import migrations, models$/;"	kind:namespace	line:5
+migrations	polls/migrations/0008_course_mytype.py	/^from django.db import migrations, models$/;"	kind:namespace	line:5
 model_name	polls/migrations/0001_initial.py	/^            model_name='course',$/;"	kind:variable	line:56
 model_name	polls/migrations/0002_course_name.py	/^            model_name='course',$/;"	kind:variable	line:17
 model_name	polls/migrations/0003_course_current.py	/^            model_name='course',$/;"	kind:variable	line:16
@@ -158,17 +172,24 @@ model_name	polls/migrations/0005_auto_20170514_1030.py	/^            model_name=
 model_name	polls/migrations/0005_auto_20170514_1030.py	/^            model_name='myuser',$/;"	kind:variable	line:21
 model_name	polls/migrations/0006_auto_20170514_1444.py	/^            model_name='myuser',$/;"	kind:variable	line:16
 model_name	polls/migrations/0006_auto_20170514_1444.py	/^            model_name='process',$/;"	kind:variable	line:21
+model_name	polls/migrations/0007_auto_20170531_1130.py	/^            model_name='course',$/;"	kind:variable	line:16
+model_name	polls/migrations/0007_auto_20170531_1130.py	/^            model_name='course',$/;"	kind:variable	line:21
+model_name	polls/migrations/0008_course_mytype.py	/^            model_name='course',$/;"	kind:variable	line:16
 models	polls/migrations/0001_initial.py	/^from django.db import migrations, models$/;"	kind:namespace	line:5
 models	polls/migrations/0001_initial.py	/^import django.db.models.deletion$/;"	kind:namespace	line:6
 models	polls/migrations/0002_course_name.py	/^from django.db import migrations, models$/;"	kind:namespace	line:5
 models	polls/migrations/0003_course_current.py	/^from django.db import migrations, models$/;"	kind:namespace	line:5
 models	polls/migrations/0004_course_credit.py	/^from django.db import migrations, models$/;"	kind:namespace	line:5
 models	polls/migrations/0005_auto_20170514_1030.py	/^from django.db import migrations, models$/;"	kind:namespace	line:5
+models	polls/migrations/0007_auto_20170531_1130.py	/^from django.db import migrations, models$/;"	kind:namespace	line:5
+models	polls/migrations/0008_course_mytype.py	/^from django.db import migrations, models$/;"	kind:namespace	line:5
 models	polls/models.py	/^from django.db import models$/;"	kind:namespace	line:4
 models.py	polls/models.py	1;"	kind:file	line:1
-mytype	polls/models.py	/^	mytype = models.CharField(max_length=17)$/;"	kind:variable	line:46
+mytype	polls/models.py	/^	mytype = models.CharField(max_length=17)$/;"	kind:variable	line:49
 mytype	polls/models.py	/^	mytype = models.CharField(max_length=17)$/;"	kind:variable	line:9
-mytype	polls/views.py	/^    mytype = forms.ChoiceField(choices=PROCESS_CHOICES,label='流程类型')$/;"	kind:variable	line:280
+mytype	polls/models.py	/^	mytype = models.CharField(max_length=7, default='必修')$/;"	kind:variable	line:31
+mytype	polls/views.py	/^    mytype = forms.ChoiceField(choices=COURSE_CHOICES,label='类型')$/;"	kind:variable	line:207
+mytype	polls/views.py	/^    mytype = forms.ChoiceField(choices=PROCESS_CHOICES,label='流程类型')$/;"	kind:variable	line:326
 name	polls/apps.py	/^    name = 'polls'$/;"	kind:variable	line:8
 name	polls/migrations/0001_initial.py	/^            name='Course',$/;"	kind:variable	line:18
 name	polls/migrations/0001_initial.py	/^            name='MyUser',$/;"	kind:variable	line:28
@@ -180,6 +201,9 @@ name	polls/migrations/0003_course_current.py	/^            name='current',$/;"	k
 name	polls/migrations/0004_course_credit.py	/^            name='credit',$/;"	kind:variable	line:17
 name	polls/migrations/0005_auto_20170514_1030.py	/^            name='credit_current',$/;"	kind:variable	line:17
 name	polls/migrations/0005_auto_20170514_1030.py	/^            name='credit_limit',$/;"	kind:variable	line:22
+name	polls/migrations/0007_auto_20170531_1130.py	/^            name='standard',$/;"	kind:variable	line:17
+name	polls/migrations/0007_auto_20170531_1130.py	/^            name='syllabus',$/;"	kind:variable	line:22
+name	polls/migrations/0008_course_mytype.py	/^            name='mytype',$/;"	kind:variable	line:17
 name	polls/models.py	/^	name = models.CharField(max_length=17)$/;"	kind:variable	line:22
 name	polls/models.py	/^	name = models.CharField(max_length=17)$/;"	kind:variable	line:8
 new_name	polls/migrations/0006_auto_20170514_1444.py	/^            new_name='mytype',$/;"	kind:variable	line:18
@@ -192,31 +216,38 @@ operations	polls/migrations/0003_course_current.py	/^    operations = [$/;"	kind
 operations	polls/migrations/0004_course_credit.py	/^    operations = [$/;"	kind:variable	line:14
 operations	polls/migrations/0005_auto_20170514_1030.py	/^    operations = [$/;"	kind:variable	line:14
 operations	polls/migrations/0006_auto_20170514_1444.py	/^    operations = [$/;"	kind:variable	line:14
+operations	polls/migrations/0007_auto_20170531_1130.py	/^    operations = [$/;"	kind:variable	line:14
+operations	polls/migrations/0008_course_mytype.py	/^    operations = [$/;"	kind:variable	line:14
 os	manage.py	/^import os$/;"	kind:namespace	line:2
 os	mysite/settings.py	/^import os$/;"	kind:namespace	line:13
 os	mysite/wsgi.py	/^import os$/;"	kind:namespace	line:10
-password	polls/views.py	/^    password = forms.CharField(label='密码', widget=forms.PasswordInput())$/;"	kind:variable	line:147
+password	polls/views.py	/^    password = forms.CharField(label='密码', widget=forms.PasswordInput())$/;"	kind:variable	line:168
 place	polls/models.py	/^	place = models.CharField(max_length=17)$/;"	kind:variable	line:27
-place	polls/views.py	/^    place = forms.CharField(label='上课地点', max_length=17)$/;"	kind:variable	line:182
+place	polls/views.py	/^    place = forms.CharField(label='上课地点', max_length=17)$/;"	kind:variable	line:209
 preserve_default	polls/migrations/0002_course_name.py	/^            preserve_default=False,$/;"	kind:variable	line:20
+random	polls/views.py	/^import random$/;"	kind:namespace	line:11
 render	polls/views.py	/^from django.shortcuts import render, render_to_response, get_object_or_404 $/;"	kind:namespace	line:5
 render_to_response	polls/views.py	/^from django.shortcuts import render, render_to_response, get_object_or_404 $/;"	kind:namespace	line:5
 school	polls/models.py	/^	school = models.CharField(max_length=17)$/;"	kind:variable	line:10
 settings.py	mysite/settings.py	1;"	kind:file	line:1
-signup	polls/views.py	/^    def signup(self, courseid):$/;"	kind:member	line:48
-signup	polls/views.py	/^def signup(req, courseid):$/;"	kind:function	line:242
-startTime	polls/models.py	/^	startTime = models.DateTimeField('start')$/;"	kind:variable	line:44
-startTime	polls/views.py	/^    startTime = forms.DateTimeField(widget=SelectDateWidget(), label = '开始时间')$/;"	kind:variable	line:278
-state	polls/models.py	/^	state = models.CharField(max_length=17)$/;"	kind:variable	line:41
-state	polls/models.py	/^	state = models.CharField(max_length=17)$/;"	kind:variable	line:47
-student	polls/models.py	/^	student = models.ForeignKey(MyUser)$/;"	kind:variable	line:39
+signup	polls/views.py	/^    def signup(self, courseid):$/;"	kind:member	line:52
+signup	polls/views.py	/^def signup(req, courseid):$/;"	kind:function	line:281
+standard	polls/models.py	/^	standard = models.CharField(max_length=77, default='')$/;"	kind:variable	line:30
+standard	polls/views.py	/^    standard = forms.CharField(label='评分标准', max_length=77)$/;"	kind:variable	line:212
+startTime	polls/models.py	/^	startTime = models.DateTimeField('start')$/;"	kind:variable	line:47
+startTime	polls/views.py	/^    startTime = forms.DateTimeField(widget=SelectDateWidget(), label = '开始时间')$/;"	kind:variable	line:324
+state	polls/models.py	/^	state = models.CharField(max_length=17)$/;"	kind:variable	line:44
+state	polls/models.py	/^	state = models.CharField(max_length=17)$/;"	kind:variable	line:50
+student	polls/models.py	/^	student = models.ForeignKey(MyUser)$/;"	kind:variable	line:42
 subCurrent	polls/models.py	/^	def subCurrent(self, num=1):$/;"	kind:member	line:16
-subCurrent	polls/models.py	/^	def subCurrent(self, num=1):$/;"	kind:member	line:34
+subCurrent	polls/models.py	/^	def subCurrent(self, num=1):$/;"	kind:member	line:37
+syllabus	polls/models.py	/^	syllabus = models.CharField(max_length=77, default='')$/;"	kind:variable	line:29
+syllabus	polls/views.py	/^    syllabus = forms.CharField(label='教学大纲', max_length=77)$/;"	kind:variable	line:211
 sys	manage.py	/^import sys$/;"	kind:namespace	line:3
 teacher	polls/models.py	/^	teacher = models.ForeignKey(MyUser)$/;"	kind:variable	line:21
 tests.py	polls/tests.py	1;"	kind:file	line:1
 time	polls/models.py	/^	time = models.CharField(max_length=17)$/;"	kind:variable	line:26
-time	polls/views.py	/^    time = forms.CharField(label='上课时间', max_length=17)$/;"	kind:variable	line:181
+time	polls/views.py	/^    time = forms.CharField(label='上课时间', max_length=17)$/;"	kind:variable	line:208
 time	polls/views.py	/^import time$/;"	kind:namespace	line:9
 timezone	polls/migrations/0002_course_name.py	/^import django.utils.timezone$/;"	kind:namespace	line:6
 unicode_literals	polls/admin.py	/^from __future__ import unicode_literals$/;"	kind:namespace	line:2
@@ -227,6 +258,8 @@ unicode_literals	polls/migrations/0003_course_current.py	/^from __future__ impor
 unicode_literals	polls/migrations/0004_course_credit.py	/^from __future__ import unicode_literals$/;"	kind:namespace	line:3
 unicode_literals	polls/migrations/0005_auto_20170514_1030.py	/^from __future__ import unicode_literals$/;"	kind:namespace	line:3
 unicode_literals	polls/migrations/0006_auto_20170514_1444.py	/^from __future__ import unicode_literals$/;"	kind:namespace	line:3
+unicode_literals	polls/migrations/0007_auto_20170531_1130.py	/^from __future__ import unicode_literals$/;"	kind:namespace	line:3
+unicode_literals	polls/migrations/0008_course_mytype.py	/^from __future__ import unicode_literals$/;"	kind:namespace	line:3
 unicode_literals	polls/models.py	/^from __future__ import unicode_literals$/;"	kind:namespace	line:2
 unicode_literals	polls/tests.py	/^from __future__ import unicode_literals$/;"	kind:namespace	line:2
 unicode_literals	polls/views.py	/^from __future__ import unicode_literals$/;"	kind:namespace	line:3
@@ -236,9 +269,9 @@ urlpatterns	mysite/urls.py	/^urlpatterns = [$/;"	kind:variable	line:19
 urlpatterns	polls/urls.py	/^urlpatterns = [$/;"	kind:variable	line:5
 urls.py	mysite/urls.py	1;"	kind:file	line:1
 urls.py	polls/urls.py	1;"	kind:file	line:1
-username	polls/views.py	/^    username = forms.CharField(label='用户名', max_length=17)$/;"	kind:variable	line:146
+username	polls/views.py	/^    username = forms.CharField(label='用户名', max_length=17)$/;"	kind:variable	line:167
 utils	polls/migrations/0002_course_name.py	/^import django.utils.timezone$/;"	kind:namespace	line:6
 views	polls/urls.py	/^from . import views$/;"	kind:namespace	line:3
 views.py	polls/views.py	1;"	kind:file	line:1
-widgets	polls/views.py	/^from django.contrib.admin import widgets$/;"	kind:namespace	line:14
+widgets	polls/views.py	/^from django.contrib.admin import widgets$/;"	kind:namespace	line:15
 wsgi.py	mysite/wsgi.py	1;"	kind:file	line:1

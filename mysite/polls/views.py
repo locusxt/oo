@@ -78,7 +78,10 @@ class Student:
         courses = courses.exclude(id__in = signedid)
         return courses
     def getSignupInfo(self):
-        signupinfo = SignupInfo.objects.filter(student = self.student)
+        signupinfo = SignupInfo.objects.filter(student = self.student).exclude(state = 'end')
+        return signupinfo
+    def getGPAs(self):
+        signupinfo = SignupInfo.objects.filter(student = self.student, state = 'end')
         return signupinfo
     def cancelSignup(self, courseid):
         pinfo = self.ps.getinfo()
@@ -312,6 +315,15 @@ def cancelSignup(req, courseid):
     res = student.cancelSignup(courseid)
     messages.add_message(req, messages.WARNING, res) 
     return getSignupInfo(req)
+
+def getGPAs(req):
+    uname = req.COOKIES.get('username','')
+    user = get_object_or_404(MyUser, name = uname)
+    student = Student(user)
+    res = student.getGPAs()
+    return render(req, 'getgpas.html', {'user':uname,'u':user, 'sinfo':res})
+
+    
 
 ##MyAdmin view
 PROCESS_CHOICES = (

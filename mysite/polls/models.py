@@ -42,6 +42,7 @@ class SignupInfo(models.Model):
 	student = models.ForeignKey(MyUser)
 	course = models.ForeignKey(Course)
 	state = models.CharField(max_length=17)
+	gpa = models.FloatField(default=4.0)
 
 class Process(models.Model):
 	startTime = models.DateTimeField('start')
